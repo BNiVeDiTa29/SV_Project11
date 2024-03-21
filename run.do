@@ -1,9 +1,8 @@
 vlib work
-vdel -all
-vlib work
-vlog -lint fsm.sv
-vlog -lint 8088.svp +acc -sv
-vlog -lint top-3_MARK.sv +acc -sv
+vlog 8088.svp -lint 
+vlog fsm.sv -lint 
+vlog interface.sv -lint +acc
+vlog top-3_MARK.sv -lint +acc
 vsim work.top
-add wave -r /*
+add wave -r *
 run -all
